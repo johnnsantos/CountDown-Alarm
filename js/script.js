@@ -11,6 +11,13 @@ let segundoAtual;
 
 let interval;
 
+let pegatempo = new Date();
+
+let horas = document.getElementById("horas");
+
+horas.innerHTML = pegatempo.getHours() + ":" + pegatempo.getMinutes();
+
+
 for(let i = 0; i <= 60; i++) {
     minutos.innerHTML+='<option value="'+i+'">'+i+'</option>';
 }
@@ -23,7 +30,11 @@ comecar.addEventListener('click', function(){
     minutoAtual = minutos.value;
     segundoAtual = segundos.value;
 
+    if(minutoAtual === 0) {
+    mostrador.childNodes[1].innerHTML = segundoAtual;
+    } else {
     mostrador.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
+    }
 
     interval = setInterval (function(){
         segundoAtual--;
@@ -36,6 +47,9 @@ comecar.addEventListener('click', function(){
                 clearInterval(interval);
             }
         }
-        mostrador.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
+        if(minutoAtual === 0) {
+            mostrador.childNodes[1].innerHTML = segundoAtual;
+        } else {
+        mostrador.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;}
     },1000);
 })
