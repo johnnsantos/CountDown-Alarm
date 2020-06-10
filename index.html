@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/42c8de28f3.js" crossorigin="anonymous"></script>
+  <title>CountDown Alarm - Johnnatan Santos</title>
+</head>
+<body>
+    <audio id="sound" src="./sound/alarm.mp3" style="display: none;"></audio>
+  <div id="conteudo">
+    <div class="celular">
+      <div class="tela">
+        <div class="barratop">
+          <div class="dock-esquerdo">
+            <span class="clock">22:45</span>
+          </div>
+          <div class="dock">
+            <div class="sensor"></div>
+            <div class="speaker"></div>
+            <div class="camera"></div>
+          </div>
+          <div class="dock-direito">
+            <div class="signal"><i class="fas fa-signal"></i></div>
+            <div class="wifi"><i class="fas fa-wifi"></i></div>
+            <div class="battery"><i class="fas fa-battery-half"></i></div>
+          </div>
+        </div>
+
+        <div id="fulldisplay">
+
+            <div class="container">
+
+                <span id="nameminutos">Minutos</span>
+                <select name="minutos" id="caixaminutos"></select>
+
+                <span id="namesegundos">Segundos</span>
+                <select name="segundos" id="caixasegundos"></select>
+
+                <button id="comecar">Começar!</button>
+
+                <div id="mostrador">
+                    <h3></h3>
+                </div>
+
+            </div>
+      
+        </div>
+        
+        <div id="dock-home">
+          <div class="buttons-home">
+            <div class="icon-app"><a href="http://github.com/johnnsantos"><i class="fab fa-github"></i></a></div>
+            <div class="icon-app"><a href="https://www.linkedin.com/in/johnnsantos/"><i class="fab fa-linkedin"></i></a></div>
+            <div class="icon-app"><a href="https://api.whatsapp.com/send?phone=5531973100788&text=Ol%C3%A1!"><i class="fab fa-whatsapp"></i></a></div>
+            <div class="icon-app"><a href="https://www.facebook.com/johnnsantos"><i class="fab fa-facebook"></i></a></div>
+          </div>
+        </div>
+        
+        <div class="dock-bt-home">
+          <div class="home"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="./js/script.js"></script>
+</body>
+</html>
